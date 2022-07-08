@@ -1,0 +1,21 @@
+h1{
+    color: blue;
+    text-align: center;
+}
+
+ion-label:hover{
+    background-color: bisque;
+}
+ion-input{
+    background-color:darkgray;
+}
+
+ion-card{
+    margin-top: 1%;
+    border: solid cadetblue;
+    padding: 1%;
+    
+}
+ion-card ion-input{
+    color:white
+}

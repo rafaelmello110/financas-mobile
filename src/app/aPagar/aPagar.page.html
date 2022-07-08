@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>A Pagar</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card >
+    <h1>Novas Contas</h1>
+    <ion-label>id:<ion-input [(ngModel)]="novoaPagar.id"></ion-input></ion-label>
+   <ion-label>nome:<ion-input [(ngModel)]="novoaPagar.nome"></ion-input></ion-label>
+   <ion-label>valor:<ion-input [(ngModel)]="novoaPagar.valor"></ion-input></ion-label>
+   <ion-button (click)="inserir()">Inserir</ion-button>
+   
+
+  </ion-card>
+
+  <h1>A Pagar</h1>
+  <ion-list>
+    <ion-item *ngFor="let data of aPagar" >
+      <ion-label>{{data.id}}</ion-label>
+      <ion-label>{{data.nome}}</ion-label>
+      <ion-label>{{data.valor}}</ion-label>
+    </ion-item>
+
+  </ion-list>
+
+
+  
+</ion-content>

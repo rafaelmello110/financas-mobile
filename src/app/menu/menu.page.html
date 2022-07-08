@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>App de Finanças</ion-title>
+    <ion-avatar slot="end">
+      <img src="assets/android.png">
+    </ion-avatar>
+
+  </ion-toolbar>   
+  
+</ion-header>
+
+<ion-content>
+
+  <ion-menu side="start" menuId="first" contentId="meuMenu">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item routerLink='/aPagar'>a Pagar</ion-item>
+        <ion-item routerLink='/aReceber'>a Receber</ion-item>        
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <div class="ion-page" id="meuMenu">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button><ion-icon name="apps-outline"></ion-icon></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Menu paulada</ion-title>
+      </ion-toolbar>
+    </ion-header>
+   
+  </div>
+
+</ion-content>
