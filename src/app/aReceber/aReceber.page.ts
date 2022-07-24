@@ -9,13 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class aReceberPage implements OnInit {
 
   private aReceber: any;
-  private contato={
-    nome: '',
-    telefone: ''};
-  private contatos: any[];
   private novoaReceber={
+    id: '',
     nome: '',
-    descricao: '',
     valor:''
   };
   private valueSelect: any;
@@ -24,17 +20,17 @@ export class aReceberPage implements OnInit {
 
  
   ngOnInit() {
-    this.aReceber=this.dadosService.carregarTodosaReceber();
-    this.contatos=this.dadosService.carregarTodosDados();    
+
+    this.aReceber=this.dadosService.carregarTodosReceber();   
   }
 
   inserir(){
-    this.dadosService.inseriraReceber(this.novoaReceber.nome,this.novoaReceber.descricao,this.novoaReceber.valor);
-    this.aReceber=this.dadosService.carregarTodosaReceber();
+    this.dadosService.inserirDado(this.novoaReceber.id,this.novoaReceber.nome,this.novoaReceber.valor,'R');
+    this.aReceber=this.dadosService.carregarTodosReceber();
+    this.novoaReceber.id='';
     this.novoaReceber.nome='';
-    this.novoaReceber.descricao='';
-    this.novoaReceber.descricao='';
-    this.valueSelect='';
+    this.novoaReceber.valor='';
+
   }
 
   escolheContato(){

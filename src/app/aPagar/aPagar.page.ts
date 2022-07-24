@@ -19,10 +19,13 @@ export class aPagarPage implements OnInit {
   constructor(public dadosService: DadosService) { }
 
   ngOnInit() {
-    this.aPagar=this.dadosService.carregarTodosDados();
+    this.aPagar=this.dadosService.carregarTodosApgar();
   }
   inserir(){
-    this.dadosService.inserirDado(this.novoaPagar.id,this.novoaPagar.nome,this.novoaPagar.valor);
-    this.aPagar=this.dadosService.carregarTodosDados();
+    this.dadosService.inserirDado(this.novoaPagar.id,this.novoaPagar.nome,this.novoaPagar.valor,'P');
+    this.aPagar=this.dadosService.carregarTodosApgar();
+    this.aPagar.id='';
+    this.aPagar.nome='';
+    this.aPagar.valor='';
   }
 }

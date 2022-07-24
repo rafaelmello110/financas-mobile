@@ -18,7 +18,11 @@ const routes: Routes = [
   {
     path: 'aReceber',
     loadChildren: () => import('./aReceber/aReceber.module').then( m => m.aReceberPageModule)
+  },  {
+    path: 'listacontas',
+    loadChildren: () => import('./listacontas/listacontas.module').then( m => m.ListacontasPageModule)
   },
+
 ];
 
 @NgModule({

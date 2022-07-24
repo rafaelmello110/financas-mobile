@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Listagem de Contas</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <h1>Lista de Contas</h1>
+  <ion-list>
+    <ion-item *ngFor="let data of contas" >
+      <ion-label>{{data.id}}</ion-label>
+      <ion-label>{{data.nome}}</ion-label>
+      <ion-label>{{data.valor}}</ion-label>
+      <ion-label>{{data.tag}}</ion-label>
+    </ion-item>
+
+  </ion-list>
+
+
+  
+</ion-content>
